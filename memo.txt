@@ -1,6 +1,12 @@
--公式ドキュメンタリー
+- 公式ドキュメント
 -- 命名規則など
 https://macromates.com/manual/en/language_grammars
 
---正規表現
+-- 正規表現
 https://macromates.com/manual/ja/regular_expressions#syntax_oniguruma
+
+
+- 開発予定アイテム
+-- #include や #ifdef の定数のハイライト
+-- section名のハイライト
+-- 文字列に含まれる数字と数字のみ区別してハイライト
