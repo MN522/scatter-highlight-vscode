@@ -1,0 +1,25 @@
+{
+  "name": "scattersyntax",
+  "displayName": "ScatterSyntax",
+  "description": "This extension provides syntax highlighting for ARM's scatter files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "scatter",
+      "aliases": ["scatter", "scatter"],
+      "extensions": [".x"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "scatter",
+      "scopeName": "source.scatter",
+      "path": "./syntaxes/scatter.tmLanguage.json"
+    }]
+  }
+}

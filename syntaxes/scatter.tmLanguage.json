@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "scatter",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#multiple_comment"
+		},
+		{
+			"include": "#address"
+		},
+		{
+			"include": "#attribute"
+		},
+		{
+			"include": "#reserved_word"
+		},
+		{
+			"include": "#section"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.scatter",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"reserved_word": {
+			"patterns": [{
+				"name": "keyword.control.scatter",
+				"match": "(#include|#ifdef|#endif|#!armcc|#define|i.__ARM_*|__atiribute__|__at)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.scatter",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scatter",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"patterns": [{
+					"name": "comment.line.double-slash",
+					"match": "//.*|//.*|\/\/.*$|;.*$"
+				}]
+		},
+		"multiple_comment": {
+			"name": "comment.block",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+		"address": {
+			"patterns": [{
+					"name": "constant.numeric",
+					"match": "0x\\h+|\\d"
+				}]
+		},
+		"attribute": {
+			"patterns": [{
+				"name": "constant.character",
+				"match": "\\+RO|\\+WO|\\+RW|\\+ZI"
+			}]
+		}
+	},
+	"scopeName": "source.scatter"
+}

@@ -1,0 +1,6 @@
+-公式ドキュメンタリー
+-- 命名規則など
+https://macromates.com/manual/en/language_grammars
+
+--正規表現
+https://macromates.com/manual/ja/regular_expressions#syntax_oniguruma
