@@ -1,0 +1,6 @@
+*.c
+*.x
+CHANGELOG.md
+token.txt
+*.vsix
+.vscode/

@@ -15,7 +15,7 @@
 			"include": "#multiple_comment"
 		},
 		{
-			"include": "#address"
+			"include": "#num"
 		},
 		{
 			"include": "#attribute"
@@ -25,6 +25,9 @@
 		},
 		{
 			"include": "#section"
+		},
+		{
+			"include": "#constant"
 		}
 	],
 	"repository": {
@@ -37,7 +40,7 @@
 		"reserved_word": {
 			"patterns": [{
 				"name": "keyword.control.scatter",
-				"match": "(#include|#ifdef|#endif|#!armcc|#define|i.__ARM_*|__atiribute__|__at)\\b"
+				"match": "(#include|#ifdef|#endif|#!armcc|#define|i.__ARM_*|__atiribute__|__at|.mem_heap)\\b"
 			}]
 		},
 		"strings": {
@@ -62,16 +65,22 @@
 			"begin": "/\\*",
 			"end": "\\*/"
 		},
-		"address": {
+		"num": {
 			"patterns": [{
 					"name": "constant.numeric",
-					"match": "0x\\h+|\\d"
+					"match": "\\b(0x\\h+|\\d)\\b"
 				}]
 		},
 		"attribute": {
 			"patterns": [{
 				"name": "constant.character",
 				"match": "\\+RO|\\+WO|\\+RW|\\+ZI"
+			}]
+		},
+		"constant": {
+			"patterns": [{
+				"name": "constant.character",
+				"match": "(?<=(#define|#ifdef|#endif)\\s+)(\\w+)"
 			}]
 		}
 	},
